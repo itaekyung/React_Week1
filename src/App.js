@@ -1,21 +1,12 @@
 import React from "react";
-
-// props를 통해 부모 -> 자식 데이터가 전달됐다.
-function Son(props) {
-  return <div>나는 {props.GrandFatherName}의 손자에요!</div>;
-}
-
-function Mother(props) {
-  return <Son GrandFatherName={props.GrandFatherName} />; // 부모 컴포넌트에서 자식 컴포넌트에게 정보를 내려줌
-}
-
-function GrandFathr() {
-  const name = "나할범";
-  return <Mother GrandFatherName={name} />;
-}
+import Layout from "./Layout";
 
 function App() {
-  return <GrandFathr />;
+  return (
+    <Layout>
+      <div>App 컴포넌트에서 보낸 값입니다.</div>
+    </Layout>
+  );
 }
 
 export default App;
