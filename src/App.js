@@ -1,30 +1,25 @@
-import logo from "./logo.svg";
-import "./App.css"; //수입
-
+import React from "react";
 function App() {
-  // 여기가 자바스크립트를 쓸 수 있는 영역입니다.
-  // const x = 1;
-  // funcion test () {}
+  // <---- 자바스크립트 영역 ---->
+  function clinkBtn() {
+    alert("클릭");
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    /* <---- HTML/JSX 영역  ---->*/
+    <div
+      style={{
+        height: "100vh",
+        display: " flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      {/* 이곳에 퀴즈를 위한 html 코드를 작성해 주세요 */}
+      <span>이것은 내가 만든 App 컴포넌트 입니다.</span>
+      <button onClick={clinkBtn}>클릭!</button>
     </div>
-  ); // return 안이 JSX(JS+XML) 문법 사용
-  // return 안에서 자바스크립트 요소 쓰고 싶으면 {} 사용할것
-  // 컴포넌트의 이름은 무조건 대문자로 시작, 폴더는 소문자로 시작하는 카멜케이스
+  );
 }
 
-export default App; //수출
+export default App;
