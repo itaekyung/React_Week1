@@ -7,19 +7,20 @@ function App() {
   // const [todoList, setTodoList] = useState([]);
   // useState, useEffect, useContext, useMemo
   // useDispatch,
-  const [name, setName] = useState("김할아버지");
-
+  // const [name, setName] = useState("김할아버지");
+  const [fruit, setFruit] = useState("");
   return (
     <div>
-      {name}
-      <br />
-      <button
-        onClick={function () {
-          setName("박할아버지");
+      과일 :{" "}
+      <input
+        value={fruit}
+        onChange={function (event) {
+          // console.log(event.target.value);
+          setFruit(event.target.value);
         }}
-      >
-        클릭
-      </button>
+      />
+      <br />
+      {fruit}
     </div>
   );
 }
