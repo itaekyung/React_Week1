@@ -8,42 +8,24 @@ function App() {
   // useState, useEffect, useContext, useMemo
   // useDispatch,
   // const [name, setName] = useState("김할아버지");
-  const [id, setId] = useState("");
-  const [pw, setPw] = useState("");
-
+  let [btn, setBtn] = useState(0);
   return (
     <div>
-      <form
-        onSubmit={function () {
-          alert(
-            `고객님이 입력하신 아이디는 ${id}이며, 비밀번호는 ${pw} 입니다.`
-          );
-          setId(""); // 초기화
-          setPw(""); // 초기화
+      <div>{btn}</div>
+      <button
+        onClick={() => {
+          setBtn((btn += 1));
         }}
       >
-        아이디 :{" "}
-        <input
-          type="text"
-          required
-          value={id}
-          onChange={function (event) {
-            // console.log(event.target.value);
-            setId(event.target.value);
-          }}
-        />
-        <br />
-        비밀번호 :{" "}
-        <input
-          type="password"
-          value={pw}
-          required
-          onChange={function (event) {
-            setPw(event.target.value);
-          }}
-        />
-        <br /> <input type="submit" value="로그인" />
-      </form>
+        + 1
+      </button>
+      <button
+        onClick={() => {
+          setBtn((btn -= 1));
+        }}
+      >
+        -1
+      </button>
     </div>
   );
 }
