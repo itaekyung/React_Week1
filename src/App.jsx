@@ -1,11 +1,9 @@
 import React from "react";
+import Child from "Child";
 
 function App() {
-  return <User>안녕하세요!</User>;
-}
-
-function User(props) {
-  return <div>{props.children}</div>;
+  const name = "test";
+  return <Child name={name}>이름</Child>;
 }
 
 export default App;
