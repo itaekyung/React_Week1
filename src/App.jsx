@@ -1,9 +1,23 @@
-import React from "react";
-import Child from "Child";
+import React, { useState } from "react";
 
 function App() {
-  const name = "test";
-  return <Child name={name}>이름</Child>;
+  // hook
+  // useState, useEffect, useContext,
+  const [fruit, setFruit] = useState("");
+
+  return (
+    <div>
+      과일 :{" "}
+      <input
+        value={fruit}
+        onChange={(e) => {
+          setFruit(e.target.value);
+        }}
+        type="text"
+      />
+      {fruit}
+    </div>
+  );
 }
 
 export default App;
